@@ -12,15 +12,12 @@ WORKDIR /tmp
 RUN pip3 install -r requirements.txt
 
 # Copy app
-WORKDIR /api
-COPY . /api
+WORKDIR /api-dir
+COPY . /api-dir
 
-# Change permissions to wrapper bashz script 
+# Change permissions to wrapper bash script 
 RUN ls -l 
-RUN chmod a+x *.sh
+RUN chmod +x *.sh
 
-WORKDIR /
-RUN ls -l
-
-# Start service with bash script: gunicorn configuration are detailed here
-CMD [". api/start_api_service.sh"]
+# Start service with bash script
+CMD "./start_api_service.sh"

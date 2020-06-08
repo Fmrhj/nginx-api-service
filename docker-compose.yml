@@ -5,8 +5,7 @@ services:
   api:
     container_name: api
     restart: always
-    build: ./api
-    volumes: ['./api:/api']
+    build: ./api-container
     networks:
       - apinetwork
     expose:
@@ -17,7 +16,7 @@ services:
   nginx:
     container_name: nginx
     restart: always
-    build: ./nginx
+    build: ./nginx-container
     networks:
       - apinetwork
     expose:

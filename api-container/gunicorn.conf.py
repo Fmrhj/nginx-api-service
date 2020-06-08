@@ -1,8 +1,7 @@
 import os
 import multiprocessing
 
-_ROOT = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..'))
+_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 _VAR = os.path.join(_ROOT, 'var')
 _ETC = os.path.join(_ROOT, 'etc')
 
