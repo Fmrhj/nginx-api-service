@@ -3,7 +3,7 @@ version: '3'
 services:
 
   api:
-    container_name: api
+    container_name: api_container
     restart: always
     build: ./api-container
     networks:
@@ -14,7 +14,7 @@ services:
       - "5000:5000"
 
   nginx:
-    container_name: nginx
+    container_name: nginx_container
     restart: always
     build: ./nginx-container
     networks:
