@@ -4,8 +4,8 @@ Simple service with nginx as load balancer and reverse proxy and a basic flask b
 ```bash
 # folder structure
 +--nginx-api-service
-    +-- api
-    +-- nginx
+    +-- api-container
+    +-- nginx-container
     docker-compose.yml
     README.md
 ```
